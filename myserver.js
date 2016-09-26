@@ -13,9 +13,9 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.get('/favicon.ico', function(res, res) {
-    res.end();
-});
+// app.get('/favicon.ico', function(res, res) {
+//     res.end();
+// });
 
 //get the date and set format
 
@@ -36,5 +36,5 @@ app.get('/:date', function(req, res){
 });
 
 app.listen(app.get('port'), function(){
-    console.log('Example app listening on port 8080!');
+    console.log('Example app listening on port', app.get('port'));
 });
