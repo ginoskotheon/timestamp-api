@@ -13,6 +13,10 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
+app.get('/favicon.ico', function(res, res) {
+    res.end();
+});
+
 //get the date and set format
 
 app.get('/:date', function(req, res){
