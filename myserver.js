@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+app.set('port', (process.env.PORT || 8080));
+
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 
@@ -29,6 +31,6 @@ app.get('/:date', function(req, res){
     res.json(result);
 });
 
-app.listen(8080, function(){
+app.listen(app.get('port'), function(){
     console.log('Example app listening on port 8080!');
 });
